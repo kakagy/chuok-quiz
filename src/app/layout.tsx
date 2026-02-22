@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={dungGeunMo.variable}>
-      <body className="bg-[#0a0a1a] text-[#e0e0e0] min-h-screen antialiased">
+      <body className="bg-retro-bg text-retro-text min-h-screen antialiased font-pixel">
         {children}
       </body>
     </html>
