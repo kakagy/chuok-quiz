@@ -6,6 +6,7 @@ import animeData from "@/data/quizzes/anime.json";
 import tvData from "@/data/quizzes/tv.json";
 import toysData from "@/data/quizzes/toys.json";
 import schoolData from "@/data/quizzes/school.json";
+import { seededRandom } from "./random";
 
 const quizPacks: Record<string, QuizPack> = {
   games: gamesData as QuizPack,
@@ -16,16 +17,9 @@ const quizPacks: Record<string, QuizPack> = {
   school: schoolData as QuizPack,
 };
 
-function seededRandom(seed: number): () => number {
-  let s = seed;
-  return () => {
-    s = (s * 1664525 + 1013904223) & 0xffffffff;
-    return (s >>> 0) / 0xffffffff;
-  };
-}
-
 export function shuffleChoices(
   choices: string[],
+  correctIndex: number,
   seed: number
 ): { shuffled: string[]; correctIndex: number } {
   const rand = seededRandom(seed);
@@ -34,8 +28,8 @@ export function shuffleChoices(
     const j = Math.floor(rand() * (i + 1));
     [indexed[i], indexed[j]] = [indexed[j], indexed[i]];
   }
-  const correctIndex = indexed.findIndex((item) => item.originalIndex === 0);
-  return { shuffled: indexed.map((item) => item.choice), correctIndex };
+  const newCorrectIndex = indexed.findIndex((item) => item.originalIndex === correctIndex);
+  return { shuffled: indexed.map((item) => item.choice), correctIndex: newCorrectIndex };
 }
 
 export function calculateScore(answers: { correct: boolean }[]): number {

@@ -4,20 +4,20 @@ import { shuffleChoices, calculateScore, getQuizPack, getAllCategories } from ".
 describe("shuffleChoices", () => {
   it("returns same number of choices", () => {
     const choices = ["A", "B", "C", "D"];
-    const result = shuffleChoices(choices, 42);
+    const result = shuffleChoices(choices, 0, 42);
     expect(result.shuffled).toHaveLength(4);
   });
 
   it("tracks the correct answer index after shuffle", () => {
     const choices = ["A", "B", "C", "D"];
-    const result = shuffleChoices(choices, 42);
+    const result = shuffleChoices(choices, 0, 42);
     expect(result.shuffled[result.correctIndex]).toBe("A");
   });
 
   it("produces deterministic output for same seed", () => {
     const choices = ["A", "B", "C", "D"];
-    const a = shuffleChoices(choices, 42);
-    const b = shuffleChoices(choices, 42);
+    const a = shuffleChoices(choices, 0, 42);
+    const b = shuffleChoices(choices, 0, 42);
     expect(a.shuffled).toEqual(b.shuffled);
   });
 });

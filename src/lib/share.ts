@@ -11,8 +11,28 @@ export function encodeResult(data: ShareData): string {
   return base64.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 
-export function decodeResult(encoded: string): ShareData {
-  const base64 = encoded.replace(/-/g, "+").replace(/_/g, "/");
-  const json = decodeURIComponent(escape(atob(base64)));
-  return JSON.parse(json);
+export function decodeResult(encoded: string): ShareData | null {
+  try {
+    const base64 = encoded.replace(/-/g, "+").replace(/_/g, "/");
+    let json: string;
+    if (typeof window !== "undefined") {
+      json = atob(base64);
+    } else {
+      json = Buffer.from(base64, "base64").toString();
+    }
+    const data = JSON.parse(json);
+    if (
+      typeof data.category !== "string" ||
+      typeof data.score !== "number" ||
+      typeof data.total !== "number" ||
+      typeof data.date !== "string" ||
+      data.score < 0 || data.score > 100 ||
+      data.total < 1 || data.total > 100
+    ) {
+      return null;
+    }
+    return data as ShareData;
+  } catch {
+    return null;
+  }
 }
