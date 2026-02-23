@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { CRTEffect } from "@/components/ui/CRTEffect";
 import "./globals.css";
 
 const dungGeunMo = localFont({
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="ko" className={dungGeunMo.variable}>
       <body className="bg-retro-bg text-retro-text min-h-screen antialiased font-pixel">
         {children}
+        <CRTEffect />
       </body>
     </html>
   );
