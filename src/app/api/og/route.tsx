@@ -32,13 +32,13 @@ export async function GET(request: NextRequest) {
           borderRadius: "16px",
         }}
       >
-        <div style={{ fontSize: "48px", color: "#00ff41", marginBottom: "20px" }}>
+        <div style={{ fontSize: "48px", color: "#00ff41", marginBottom: "20px", display: "flex" }}>
           추억퀴즈
         </div>
-        <div style={{ fontSize: "72px", color: "#ff6b35", marginBottom: "16px" }}>
+        <div style={{ fontSize: "72px", color: "#ff6b35", marginBottom: "16px", display: "flex" }}>
           {level}
         </div>
-        <div style={{ fontSize: "36px", marginBottom: "32px" }}>
+        <div style={{ fontSize: "36px", marginBottom: "32px", display: "flex" }}>
           나는 90년대를 {score}% 기억한다!
         </div>
         <div
@@ -59,7 +59,7 @@ export async function GET(request: NextRequest) {
             }}
           />
         </div>
-        <div style={{ fontSize: "24px", marginTop: "24px", color: "#6b7280" }}>
+        <div style={{ fontSize: "24px", marginTop: "24px", color: "#6b7280", display: "flex" }}>
           chuokquiz.com
         </div>
       </div>

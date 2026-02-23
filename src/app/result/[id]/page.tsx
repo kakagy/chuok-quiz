@@ -6,7 +6,7 @@ import { getResultLevel } from "@/lib/result-levels";
 import { getAllCategories } from "@/lib/quiz";
 import { ResultCard } from "@/components/result/ResultCard";
 import { ShareButtons } from "@/components/result/ShareButtons";
-import { RetroButton } from "@/components/ui/RetroButton";
+
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -64,15 +64,17 @@ export default async function ResultPage({ params }: PageProps) {
 
         {/* Navigation Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href={`/quiz/${result.category}`}>
-            <RetroButton variant="primary" size="lg" className="w-full sm:w-auto">
-              다시 도전하기
-            </RetroButton>
+          <Link
+            href={`/quiz/${result.category}`}
+            className="inline-block font-pixel bg-retro-primary text-retro-bg hover:brightness-110 active:brightness-90 border-2 border-retro-primary/50 text-glow px-8 py-4 text-lg text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-retro-primary transition-all duration-150"
+          >
+            다시 도전하기
           </Link>
-          <Link href="/">
-            <RetroButton variant="ghost" size="lg" className="w-full sm:w-auto">
-              다른 퀴즈 풀기
-            </RetroButton>
+          <Link
+            href="/"
+            className="inline-block font-pixel bg-transparent text-retro-text border-2 border-retro-border hover:border-retro-primary hover:text-retro-primary px-8 py-4 text-lg text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-retro-primary transition-all duration-150"
+          >
+            다른 퀴즈 풀기
           </Link>
         </div>
       </div>
