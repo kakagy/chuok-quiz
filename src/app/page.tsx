@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { getAllCategories } from "@/lib/quiz";
-import { RetroButton } from "@/components/ui/RetroButton";
 import { RetroCard } from "@/components/ui/RetroCard";
 
 export default function Home() {
@@ -17,10 +16,11 @@ export default function Home() {
           90년대를 얼마나 기억하시나요?
         </p>
         <div className="mt-8">
-          <Link href="/daily">
-            <RetroButton variant="primary" size="lg">
-              오늘의 퀴즈 시작!
-            </RetroButton>
+          <Link
+            href="/daily"
+            className="inline-block font-pixel bg-retro-primary text-retro-bg hover:brightness-110 active:brightness-90 border-2 border-retro-primary/50 text-glow px-8 py-4 text-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-retro-primary transition-all duration-150"
+          >
+            오늘의 퀴즈 시작!
           </Link>
         </div>
       </section>
@@ -32,12 +32,16 @@ export default function Home() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category) => (
-            <Link key={category.id} href={`/quiz/${category.id}`}>
+            <Link
+              key={category.id}
+              href={`/quiz/${category.id}`}
+              className="block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-retro-primary rounded-lg"
+            >
               <RetroCard
                 glow
                 className="h-full hover:border-retro-primary transition-colors duration-200 cursor-pointer"
               >
-                <div className="text-4xl mb-3">{category.icon}</div>
+                <span aria-hidden="true" className="text-4xl mb-3 block">{category.icon}</span>
                 <h3 className="text-lg text-retro-secondary mb-2">
                   {category.title}
                 </h3>
