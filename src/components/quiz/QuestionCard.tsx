@@ -55,7 +55,7 @@ export function QuestionCard({
         </div>
       )}
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3" role="group" aria-label="답변 선택">
         {choices.map((choice, index) => (
           <AnswerButton
             key={index}

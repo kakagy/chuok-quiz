@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import type { Question } from "@/types/quiz";
 import { shuffleChoices, calculateScore } from "@/lib/quiz";
@@ -35,12 +35,21 @@ export function QuizPlayer({ questions, category }: QuizPlayerProps) {
   const [answered, setAnswered] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const answersRef = useRef<Answer[]>([]);
+  const questionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
+
   const question = questions[currentIndex];
-  const seed = hashString(question.id);
-  const { shuffled, correctIndex } = shuffleChoices(
-    question.choices,
-    question.correctIndex,
-    seed
+
+  const { shuffled, correctIndex } = useMemo(
+    () => shuffleChoices(question.choices, question.correctIndex, hashString(question.id)),
+    [question.id]
   );
 
   const handleAnswer = useCallback(
@@ -57,10 +66,11 @@ export function QuizPlayer({ questions, category }: QuizPlayerProps) {
         correct: isCorrect,
       };
 
-      const updatedAnswers = [...answers, newAnswer];
+      answersRef.current = [...answersRef.current, newAnswer];
+      const updatedAnswers = answersRef.current;
       setAnswers(updatedAnswers);
 
-      setTimeout(() => {
+      timerRef.current = setTimeout(() => {
         if (currentIndex + 1 >= questions.length) {
           const score = calculateScore(updatedAnswers);
           const encoded = encodeResult({
@@ -74,10 +84,13 @@ export function QuizPlayer({ questions, category }: QuizPlayerProps) {
           setCurrentIndex((prev) => prev + 1);
           setAnswered(false);
           setSelectedIndex(null);
+          requestAnimationFrame(() => {
+            questionRef.current?.focus();
+          });
         }
       }, 1500);
     },
-    [answered, correctIndex, question.id, answers, currentIndex, questions.length, category, router]
+    [answered, correctIndex, question.id, currentIndex, questions.length, category, router]
   );
 
   return (
@@ -87,28 +100,32 @@ export function QuizPlayer({ questions, category }: QuizPlayerProps) {
           <ProgressBar current={currentIndex + 1} total={questions.length} />
         </div>
 
-        <QuestionCard
-          questionNumber={currentIndex + 1}
-          totalQuestions={questions.length}
-          question={question.text}
-          imageUrl={question.imageUrl}
-          choices={shuffled}
-          onAnswer={handleAnswer}
-          disabled={answered}
-          answerState={selectedIndex}
-          correctIndex={correctIndex}
-        />
+        <div ref={questionRef} tabIndex={-1} className="outline-none">
+          <QuestionCard
+            questionNumber={currentIndex + 1}
+            totalQuestions={questions.length}
+            question={question.text}
+            imageUrl={question.imageUrl}
+            choices={shuffled}
+            onAnswer={handleAnswer}
+            disabled={answered}
+            answerState={selectedIndex}
+            correctIndex={correctIndex}
+          />
+        </div>
 
-        {answered && (
-          <div className="mt-6 max-w-2xl mx-auto text-center">
-            <p className={`text-lg ${selectedIndex === correctIndex ? "text-green-400" : "text-red-400"}`}>
-              {selectedIndex === correctIndex ? "정답!" : "오답!"}
-            </p>
-            <p className="text-retro-muted text-sm mt-2">
-              {question.explanation}
-            </p>
-          </div>
-        )}
+        <div role="status" aria-live="polite" className="mt-6 max-w-2xl mx-auto text-center">
+          {answered && (
+            <>
+              <p className={`text-lg ${selectedIndex === correctIndex ? "text-green-400" : "text-red-400"}`}>
+                {selectedIndex === correctIndex ? "정답!" : "오답!"}
+              </p>
+              <p className="text-retro-muted text-sm mt-2">
+                {question.explanation}
+              </p>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
