@@ -1,8 +1,8 @@
 [
-  { "id": "games", "title": "PC방 레전드 게임", "description": "스타크래프트부터 메이플스토리까지, PC방을 뜨겁게 달궜던 게임들", "icon": "🎮", "questionCount": 10 },
-  { "id": "kpop", "title": "K-POP 1세대", "description": "H.O.T.부터 BoA까지, 가요계를 뒤흔든 레전드들", "icon": "🎤", "questionCount": 10 },
-  { "id": "anime", "title": "추억의 애니", "description": "슬램덩크, 드래곤볼... 학교 끝나면 달려가 본 만화들", "icon": "📺", "questionCount": 10 },
-  { "id": "tv", "title": "TV 속 그 장면", "description": "무한도전, 응답하라... 온 가족이 함께 본 TV 프로그램", "icon": "📡", "questionCount": 10 },
-  { "id": "toys", "title": "장난감 & 문화", "description": "다마고치, 미니카, 유희왕... 용돈 모아 사던 장난감들", "icon": "🧸", "questionCount": 10 },
-  { "id": "school", "title": "학교 앞 그때", "description": "문방구, 불량식품, 오락실... 학교 앞 추억의 풍경", "icon": "🏫", "questionCount": 10 }
+  { "id": "games", "title": "PC방 레전드 게임", "description": "스타크래프트부터 메이플스토리까지, PC방을 뜨겁게 달궜던 게임들", "icon": "🎮", "questionCount": 20 },
+  { "id": "kpop", "title": "K-POP 1세대", "description": "H.O.T.부터 BoA까지, 가요계를 뒤흔든 레전드들", "icon": "🎤", "questionCount": 20 },
+  { "id": "anime", "title": "추억의 애니", "description": "슬램덩크, 드래곤볼... 학교 끝나면 달려가 본 만화들", "icon": "📺", "questionCount": 20 },
+  { "id": "tv", "title": "TV 속 그 장면", "description": "무한도전, 응답하라... 온 가족이 함께 본 TV 프로그램", "icon": "📡", "questionCount": 20 },
+  { "id": "toys", "title": "장난감 & 문화", "description": "다마고치, 미니카, 유희왕... 용돈 모아 사던 장난감들", "icon": "🧸", "questionCount": 20 },
+  { "id": "school", "title": "학교 앞 그때", "description": "문방구, 불량식품, 오락실... 학교 앞 추억의 풍경", "icon": "🏫", "questionCount": 20 }
 ]
