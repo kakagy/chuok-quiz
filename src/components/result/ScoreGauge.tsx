@@ -40,7 +40,14 @@ export function ScoreGauge({ score }: ScoreGaugeProps) {
       </div>
 
       {/* Progress bar container */}
-      <div className="w-full h-6 bg-retro-bg border-2 border-retro-border relative overflow-hidden">
+      <div
+        className="w-full h-6 bg-retro-bg border-2 border-retro-border relative overflow-hidden"
+        role="progressbar"
+        aria-valuenow={displayScore}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-label={`점수: ${displayScore}%`}
+      >
         {/* Filled portion with pixel-art segmented look */}
         <div
           className="h-full bg-retro-primary transition-none relative"

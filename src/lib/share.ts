@@ -7,7 +7,9 @@ export interface ShareData {
 
 export function encodeResult(data: ShareData): string {
   const json = JSON.stringify(data);
-  const base64 = btoa(unescape(encodeURIComponent(json)));
+  const base64 = btoa(
+    Array.from(new TextEncoder().encode(json), (b) => String.fromCharCode(b)).join("")
+  );
   return base64.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 

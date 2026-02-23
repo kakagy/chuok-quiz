@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: `나는 90년대를 ${result.score}% 기억한다!`,
     openGraph: {
       images: [
-        `/api/og?score=${result.score}&category=${result.category}&level=${encodeURIComponent(level.title)}`,
+        `/api/og?score=${result.score}&category=${encodeURIComponent(result.category)}&level=${encodeURIComponent(level.title)}`,
       ],
     },
   };
@@ -40,10 +40,7 @@ export default async function ResultPage({ params }: PageProps) {
   const category = categories.find((c) => c.id === result.category);
   const categoryTitle = category?.title ?? result.category;
 
-  const shareUrl =
-    typeof window !== "undefined"
-      ? window.location.href
-      : `${process.env.NEXT_PUBLIC_BASE_URL ?? ""}/result/${id}`;
+  const shareUrl = `/result/${id}`;
 
   return (
     <main className="min-h-screen px-4 py-8 sm:py-12">
