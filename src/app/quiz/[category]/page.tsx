@@ -15,7 +15,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
   return {
     title: `${pack.title} - 추억퀴즈`,
-    description: pack.description,
+    description: `${pack.description} ${pack.questions.length}문제에 도전하세요!`,
+    openGraph: {
+      images: [`/api/og?score=90&category=${encodeURIComponent(category)}&level=${encodeURIComponent(pack.title)}`],
+    },
   };
 }
 

@@ -16,9 +16,37 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_BASE_URL ?? "https://chuokquiz.com"
   ),
-  title: "추억퀴즈 - 90년대를 얼마나 기억하시나요?",
+  title: {
+    default: "추억퀴즈 - 90년대를 얼마나 기억하시나요?",
+    template: "%s | 추억퀴즈",
+  },
   description:
-    "90년대~2000년대 한국 문화 퀴즈. PC방, K-POP, 애니메이션, 학교 추억을 테스트하세요!",
+    "90년대~2000년대 한국 문화 퀴즈. PC방 게임, K-POP 1세대, 추억의 애니, TV 프로그램, 장난감, 학교 앞 추억을 테스트하세요!",
+  keywords: [
+    "추억퀴즈",
+    "90년대 퀴즈",
+    "2000년대 퀴즈",
+    "한국 문화 퀴즈",
+    "PC방 게임",
+    "K-POP 1세대",
+    "추억의 애니",
+    "레트로 퀴즈",
+    "스타크래프트",
+    "H.O.T.",
+    "슬램덩크",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    siteName: "추억퀴즈",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

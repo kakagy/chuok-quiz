@@ -3,7 +3,7 @@ import { getAllCategories } from "@/lib/quiz";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const categories = getAllCategories();
-  const baseUrl = "https://chuokquiz.com";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://chuokquiz.com";
 
   return [
     {

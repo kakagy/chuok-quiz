@@ -1,12 +1,33 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllCategories } from "@/lib/quiz";
 import { RetroCard } from "@/components/ui/RetroCard";
 
+export const metadata: Metadata = {
+  openGraph: {
+    images: ["/api/og?score=90&category=&level=%EC%B6%94%EC%96%B5%ED%80%B4%EC%A6%88"],
+  },
+};
+
 export default function Home() {
   const categories = getAllCategories();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "추억퀴즈",
+    description: "90년대~2000년대 한국 문화 퀴즈",
+    applicationCategory: "Game",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+  };
+
   return (
     <main className="min-h-screen px-4 py-8 sm:py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* CRT Monitor Frame / Hero */}
       <section className="crt-screen mx-auto max-w-2xl bg-retro-surface border-2 border-retro-border p-8 sm:p-12 text-center mb-12">
         <h1 className="text-4xl sm:text-5xl text-retro-primary text-glow cursor-blink">
