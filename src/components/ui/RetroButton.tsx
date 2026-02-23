@@ -12,7 +12,7 @@ export function RetroButton({
   children,
   ...props
 }: RetroButtonProps) {
-  const base = "font-pixel transition-all duration-150 cursor-pointer";
+  const base = "font-pixel transition-all duration-150 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-retro-primary";
 
   const variants = {
     primary:
