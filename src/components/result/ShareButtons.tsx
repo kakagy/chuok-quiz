@@ -11,12 +11,38 @@ interface ShareButtonsProps {
 
 export function ShareButtons({ score, shareUrl }: ShareButtonsProps) {
   const [copied, setCopied] = useState(false);
-  const [kakaoMessage, setKakaoMessage] = useState(false);
   const [resolvedUrl, setResolvedUrl] = useState(shareUrl);
+  const [kakaoReady, setKakaoReady] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   useEffect(() => {
     setResolvedUrl(window.location.href);
+  }, []);
+
+  useEffect(() => {
+    const kakaoAppKey = process.env.NEXT_PUBLIC_KAKAO_APP_KEY;
+    if (!kakaoAppKey) return;
+
+    const initKakao = () => {
+      if (window.Kakao && !window.Kakao.isInitialized()) {
+        window.Kakao.init(kakaoAppKey);
+      }
+      if (window.Kakao?.isInitialized()) {
+        setKakaoReady(true);
+      }
+    };
+
+    if (window.Kakao) {
+      initKakao();
+    } else {
+      const interval = setInterval(() => {
+        if (window.Kakao) {
+          initKakao();
+          clearInterval(interval);
+        }
+      }, 300);
+      return () => clearInterval(interval);
+    }
   }, []);
 
   useEffect(() => {
@@ -58,22 +84,49 @@ export function ShareButtons({ score, shareUrl }: ShareButtonsProps) {
   };
 
   const handleKakaoShare = () => {
-    setKakaoMessage(true);
-    timerRef.current = setTimeout(() => setKakaoMessage(false), 2000);
+    if (!kakaoReady || !window.Kakao) {
+      handleCopyLink();
+      return;
+    }
+
+    const baseUrl = resolvedUrl.split("/result/")[0];
+    const ogImageUrl = `${baseUrl}/api/og?score=${score}&category=&level=${encodeURIComponent(level.title)}`;
+
+    window.Kakao.Share.sendDefault({
+      objectType: "feed",
+      content: {
+        title: `${level.title} - 추억퀴즈`,
+        description: `나는 90년대를 ${score}% 기억한다! 🎮`,
+        imageUrl: ogImageUrl,
+        link: {
+          mobileWebUrl: resolvedUrl,
+          webUrl: resolvedUrl,
+        },
+      },
+      buttons: [
+        {
+          title: "나도 퀴즈 풀기",
+          link: {
+            mobileWebUrl: baseUrl,
+            webUrl: baseUrl,
+          },
+        },
+      ],
+    });
   };
 
   return (
     <div className="flex flex-col sm:flex-row gap-3 justify-center">
+      <RetroButton variant="win98" size="md" onClick={handleKakaoShare}>
+        카카오톡 공유
+      </RetroButton>
+
       <RetroButton variant="win98" size="md" onClick={handleTwitterShare}>
         X/Twitter 공유
       </RetroButton>
 
       <RetroButton variant="win98" size="md" onClick={handleCopyLink}>
         {copied ? "복사 완료!" : "링크 복사"}
-      </RetroButton>
-
-      <RetroButton variant="win98" size="md" onClick={handleKakaoShare}>
-        {kakaoMessage ? "준비 중" : "카카오톡 공유"}
       </RetroButton>
     </div>
   );
