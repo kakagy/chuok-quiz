@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { CRTEffect } from "@/components/ui/CRTEffect";
 import "./globals.css";
 
@@ -28,6 +30,8 @@ export default function RootLayout({
       <body className="bg-retro-bg text-retro-text min-h-screen antialiased font-pixel">
         {children}
         <CRTEffect />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
