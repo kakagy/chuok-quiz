@@ -1,0 +1,17 @@
+{
+  "category": "kpop",
+  "title": "K-POP 1세대",
+  "description": "H.O.T.부터 BoA까지, 1세대 아이돌을 얼마나 기억하시나요?",
+  "questions": [
+    { "id": "kpop-001", "text": "H.O.T.의 데뷔곡은?", "type": "text", "choices": ["전사의 후예", "캔디", "빛", "행복"], "correctIndex": 0, "explanation": "H.O.T.는 1996년 '전사의 후예'로 데뷔했습니다. 한국 아이돌 역사의 시작이었죠!", "year": 1996, "difficulty": "normal" },
+    { "id": "kpop-002", "text": "젝스키스의 멤버가 아닌 사람은?", "type": "text", "choices": ["강타", "은지원", "이재진", "김재덕"], "correctIndex": 0, "explanation": "강타는 H.O.T.의 멤버입니다! 젝스키스는 은지원, 이재진, 김재덕, 장수원, 고지용, 김성재로 구성되었죠.", "year": 1997, "difficulty": "easy" },
+    { "id": "kpop-003", "text": "S.E.S.의 멤버 3명은?", "type": "text", "choices": ["바다, 유진, 슈", "바다, 유진, 이효리", "바다, 슈, 옥주현", "유진, 슈, 성유리"], "correctIndex": 0, "explanation": "S.E.S.는 바다, 유진, 슈로 구성된 SM엔터테인먼트의 첫 걸그룹이었습니다!", "year": 1997, "difficulty": "easy" },
+    { "id": "kpop-004", "text": "god(지오디)의 멤버 수는?", "type": "text", "choices": ["5명", "4명", "6명", "3명"], "correctIndex": 0, "explanation": "god는 박준형, 윤계상, 손호영, 김태우, 대니안 5명으로 구성되었습니다. '어머님께'는 영원한 명곡!", "year": 1999, "difficulty": "easy" },
+    { "id": "kpop-005", "text": "BoA가 일본에서 첫 1위를 한 곡은?", "type": "text", "choices": ["LISTEN TO MY HEART", "ID; Peace B", "No.1", "Valenti"], "correctIndex": 0, "explanation": "BoA는 2002년 'LISTEN TO MY HEART'로 오리콘 차트 1위를 기록하며 일본을 정복했습니다!", "year": 2002, "difficulty": "hard" },
+    { "id": "kpop-006", "text": "1세대 아이돌 중 가장 먼저 데뷔한 그룹은?", "type": "text", "choices": ["서태지와 아이들", "H.O.T.", "젝스키스", "S.E.S."], "correctIndex": 0, "explanation": "서태지와 아이들은 1992년 데뷔! 한국 대중음악의 혁명이었습니다. '난 알아요'가 모든 것을 바꿨죠.", "year": 1992, "difficulty": "normal" },
+    { "id": "kpop-007", "text": "핑클의 대표곡 '영원한 사랑'이 수록된 앨범은 몇 집?", "type": "text", "choices": ["1집", "2집", "3집", "4집"], "correctIndex": 0, "explanation": "핑클의 1집 'Fine Killing Liberty'에 수록된 '영원한 사랑'은 1998년 최고의 히트곡이었습니다!", "year": 1998, "difficulty": "hard" },
+    { "id": "kpop-008", "text": "DJ DOC의 히트곡이 아닌 것은?", "type": "text", "choices": ["파이터", "여름 이야기", "DOC와 춤을", "Run to you"], "correctIndex": 0, "explanation": "'파이터'는 DJ DOC의 곡이 아닙니다! '여름 이야기'와 'DOC와 춤을'은 여름 축제의 필수 곡이었죠.", "year": 2000, "difficulty": "normal" },
+    { "id": "kpop-009", "text": "클론(Clon)의 대표곡은?", "type": "text", "choices": ["꿍따리 샤바라", "캔디", "Rising Sun", "하늘이여"], "correctIndex": 0, "explanation": "클론의 '꿍따리 샤바라'! 구준엽과 강원래의 댄스 콤비, 학교 축제의 단골 곡이었습니다.", "year": 1996, "difficulty": "easy" },
+    { "id": "kpop-010", "text": "이 가사가 포함된 H.O.T. 노래는? '우리들의 세상에 빛이 되어라'", "type": "text", "choices": ["빛", "전사의 후예", "캔디", "열맞춰"], "correctIndex": 0, "explanation": "'빛'은 H.O.T. 3집 수록곡으로, 팬들에게 보내는 메시지를 담은 감동적인 곡입니다.", "year": 1998, "difficulty": "hard" }
+  ]
+}

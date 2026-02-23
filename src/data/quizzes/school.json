@@ -1,0 +1,17 @@
+{
+  "category": "school",
+  "title": "학교 앞 그때",
+  "description": "문방구, 불량식품, 오락실... 학교 앞 추억의 풍경을 얼마나 기억하시나요?",
+  "questions": [
+    { "id": "school-001", "text": "학교 앞 문방구에서 100원으로 뽑을 수 있었던 것은?", "type": "text", "choices": ["뽑기", "슬라임", "레고", "인형"], "correctIndex": 0, "explanation": "100원 뽑기! 문방구 앞에서 작은 캡슐을 돌려 장난감을 뽑던 추억. 1등은 항상 전시만 되어 있었죠!", "year": 1998, "difficulty": "easy" },
+    { "id": "school-002", "text": "학교 앞 오락실에서 가장 인기 있었던 대전 격투 게임은?", "type": "text", "choices": ["킹 오브 파이터즈", "버추어 파이터", "모탈 컴뱃", "사무라이 쇼다운"], "correctIndex": 0, "explanation": "KOF(킹 오브 파이터즈)! 특히 KOF 97과 98은 오락실의 필수 게임이었습니다. 100원으로 3판 2선승!", "year": 1998, "difficulty": "easy" },
+    { "id": "school-003", "text": "다음 중 90년대 대표적인 불량식품이 아닌 것은?", "type": "text", "choices": ["허니버터칩", "쫀드기", "아폴로", "짜짜로니"], "correctIndex": 0, "explanation": "허니버터칩은 2014년에 출시된 과자입니다! 쫀드기, 아폴로, 짜짜로니는 학교 앞 문방구의 단골 불량식품이었죠.", "year": 1998, "difficulty": "normal" },
+    { "id": "school-004", "text": "초등학교 급식에서 가장 인기 있었던 메뉴는?", "type": "text", "choices": ["짜장밥", "카레라이스", "비빔밥", "김치찌개"], "correctIndex": 0, "explanation": "급식 짜장밥이 나오는 날은 축제였죠! 급식 아주머니께 '더 주세요' 하던 기억이 새롭습니다.", "year": 2000, "difficulty": "easy" },
+    { "id": "school-005", "text": "수학여행의 대표적인 목적지가 아닌 곳은?", "type": "text", "choices": ["제주도", "경주", "설악산", "속리산"], "correctIndex": 0, "explanation": "제주도는 수학여행보다는 졸업여행 목적지! 경주, 설악산, 속리산은 90~2000년대 수학여행의 3대 성지였습니다.", "year": 2000, "difficulty": "hard" },
+    { "id": "school-006", "text": "학교에서 실내화로 가장 많이 사용된 신발 색깔은?", "type": "text", "choices": ["흰색", "파란색", "검정색", "빨간색"], "correctIndex": 0, "explanation": "흰색 실내화! 매주 주말에 집에 가져가서 빨아야 했던 그 실내화. 이름을 꼭 써야 했죠.", "year": 1998, "difficulty": "normal" },
+    { "id": "school-007", "text": "졸업 앨범 사진 촬영 시 남학생들이 주로 했던 포즈는?", "type": "text", "choices": ["브이(V) 포즈", "팔짱", "주먹 쥐기", "턱 괴기"], "correctIndex": 0, "explanation": "브이(V) 포즈는 졸업 앨범의 국룰이었죠! 친구들과 어깨동무하며 브이를 하던 그때가 그립습니다.", "year": 2000, "difficulty": "normal" },
+    { "id": "school-008", "text": "2000년대 초반 학교 앞에서 유행했던 '○○ 우유'는?", "type": "text", "choices": ["바나나 우유", "딸기 우유", "초코 우유", "메론 우유"], "correctIndex": 0, "explanation": "빙그레 바나나맛 우유! 독특한 항아리 모양 용기는 1974년부터 이어져 온 한국의 상징적인 음료입니다.", "year": 2000, "difficulty": "normal" },
+    { "id": "school-009", "text": "교복 자율화가 폐지되고 다시 교복 착용이 의무화된 시기는?", "type": "text", "choices": ["1986년", "1990년", "1995년", "2000년"], "correctIndex": 0, "explanation": "1983년 교복 자율화가 시행되었다가, 1986년부터 학교별로 다시 교복을 도입하기 시작했습니다.", "year": 1993, "difficulty": "hard" },
+    { "id": "school-010", "text": "학교 종소리로 유명한 '학교 종이 땡땡땡'에서 종이 울리면 어떻게 하라고 했나요?", "type": "text", "choices": ["모이자", "헤어지자", "공부하자", "놀자"], "correctIndex": 0, "explanation": "'학교 종이 땡땡땡 어서 모이자!' 이 노래는 모든 한국인의 공통 기억이죠. 종소리가 들리면 교실로 달려가던 그때!", "year": 1993, "difficulty": "hard" }
+  ]
+}

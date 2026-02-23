@@ -1,0 +1,17 @@
+{
+  "category": "toys",
+  "title": "장난감 & 문화",
+  "description": "다마고치, 미니카, 유희왕... 용돈 모아 사던 장난감들을 얼마나 기억하시나요?",
+  "questions": [
+    { "id": "toys-001", "text": "다마고치가 처음 일본에서 발매된 해는?", "type": "text", "choices": ["1996년", "1997년", "1998년", "1995년"], "correctIndex": 0, "explanation": "다마고치는 1996년 반다이에서 출시되어 전 세계적으로 대유행했습니다. 학교에 몰래 가져가서 키우다 선생님한테 압수당한 기억!", "year": 1996, "difficulty": "normal" },
+    { "id": "toys-002", "text": "유희왕 카드게임에서 가장 강력한 몬스터로 알려진 카드는?", "type": "text", "choices": ["푸른 눈의 백룡", "블랙 매지션", "암흑의 마술사", "레드아이즈 블랙 드래곤"], "correctIndex": 0, "explanation": "카이바 세토의 상징! 푸른 눈의 백룡(블루아이즈 화이트 드래곤)은 공격력 3000으로 아이들의 로망이었습니다.", "year": 2001, "difficulty": "easy" },
+    { "id": "toys-003", "text": "닌텐도 게임보이의 한국 정식 발매 컬러는?", "type": "text", "choices": ["회색", "초록색", "파란색", "빨간색"], "correctIndex": 0, "explanation": "오리지널 게임보이는 회색이었죠! 포켓몬스터 적/녹을 플레이하기 위해 용돈을 모았던 기억이 새롭습니다.", "year": 1996, "difficulty": "hard" },
+    { "id": "toys-004", "text": "미니카(타미야 미니 사구)에서 가장 인기 있었던 시리즈는?", "type": "text", "choices": ["렛츠앤고", "대시보이", "슈퍼 패밀리", "터보 레이서"], "correctIndex": 0, "explanation": "'렛츠앤고(폭주형제 렛츠&고)'는 미니카 붐을 일으킨 애니메이션이자 시리즈입니다. 마그넘 세이버, 소닉 세이버!", "year": 1998, "difficulty": "normal" },
+    { "id": "toys-005", "text": "베이블레이드에서 주인공 강민(타카오)의 팽이 이름은?", "type": "text", "choices": ["드래군", "드란저", "드리거", "드라실"], "correctIndex": 0, "explanation": "강민의 파트너는 청룡 드래군! 베이블레이드는 팽이 놀이를 최첨단 배틀로 바꿔놓았죠.", "year": 2002, "difficulty": "normal" },
+    { "id": "toys-006", "text": "포켓몬 빵 띠부띠부씰에서 가장 레어했던 씰은?", "type": "text", "choices": ["뮤츠", "리자몽", "피카츄", "잠만보"], "correctIndex": 0, "explanation": "뮤츠 씰은 가장 구하기 어려운 레어 씰이었습니다! 포켓몬 빵을 사서 씰을 모으던 그때, 뮤츠가 나오면 영웅이 되었죠.", "year": 2002, "difficulty": "hard" },
+    { "id": "toys-007", "text": "구슬치기에서 가장 큰 구슬을 뭐라고 불렀나요?", "type": "text", "choices": ["왕구슬", "대장구슬", "킹구슬", "보스구슬"], "correctIndex": 0, "explanation": "왕구슬! 일반 구슬보다 몇 배 큰 왕구슬은 구슬치기의 최종 병기였습니다. 왕구슬 하나면 다 쓸어갈 수 있었죠!", "year": 1995, "difficulty": "easy" },
+    { "id": "toys-008", "text": "딱지치기에서 사용하던 딱지의 주요 재질은?", "type": "text", "choices": ["종이", "플라스틱", "나무", "고무"], "correctIndex": 0, "explanation": "문방구에서 사던 종이 딱지! 두꺼운 종이를 접어 만든 수제 딱지도 있었죠. 바닥을 내리쳐 뒤집으면 승리!", "year": 1995, "difficulty": "easy" },
+    { "id": "toys-009", "text": "레고와 비슷한 한국산 블록 장난감의 이름은?", "type": "text", "choices": ["옥스포드", "나노블록", "메가블럭", "코비블럭"], "correctIndex": 0, "explanation": "옥스포드는 한국의 대표적인 블록 장난감 브랜드입니다. 레고보다 저렴해서 많은 아이들이 가지고 놀았죠!", "year": 2000, "difficulty": "hard" },
+    { "id": "toys-010", "text": "크로스 파이트 비다만(구슬탄환)에서 구슬을 쏘는 장난감의 이름은?", "type": "text", "choices": ["비다만", "비드맨", "구슬전사", "마블슈터"], "correctIndex": 0, "explanation": "비다만(B-Daman)! 구슬을 쏘아 상대 목표물을 맞추는 장난감으로, 문방구 앞에서 대전을 펼치던 추억이 있죠.", "year": 2001, "difficulty": "normal" }
+  ]
+}

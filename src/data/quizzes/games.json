@@ -1,0 +1,17 @@
+{
+  "category": "games",
+  "title": "PC방 레전드 게임",
+  "description": "1998-2005년 PC방을 뜨겁게 달궜던 게임들을 얼마나 기억하시나요?",
+  "questions": [
+    { "id": "games-001", "text": "1998년 출시되어 한국 PC방 문화를 만든 전설의 게임은?", "type": "text", "choices": ["스타크래프트", "디아블로 2", "워크래프트 3", "카운터 스트라이크"], "correctIndex": 0, "explanation": "스타크래프트는 1998년 출시 이후 한국 PC방 문화의 상징이 되었습니다. 프로게이머라는 직업을 탄생시켰죠!", "year": 1998, "difficulty": "easy" },
+    { "id": "games-002", "text": "'바람의 나라'를 만든 한국 게임 회사는?", "type": "text", "choices": ["넥슨", "엔씨소프트", "한게임", "네오위즈"], "correctIndex": 0, "explanation": "넥슨은 1996년 '바람의 나라'를 출시하며 한국 온라인 게임의 역사를 열었습니다.", "year": 1996, "difficulty": "normal" },
+    { "id": "games-003", "text": "메이플스토리가 한국에서 정식 서비스를 시작한 해는?", "type": "text", "choices": ["2002년", "2003년", "2004년", "2001년"], "correctIndex": 1, "explanation": "메이플스토리는 2003년 4월 정식 서비스를 시작했습니다. 귀여운 2D 그래픽으로 큰 인기를 끌었죠!", "year": 2003, "difficulty": "normal" },
+    { "id": "games-004", "text": "카트라이더에서 가장 먼저 출시된 카트는?", "type": "text", "choices": ["연습용 카트", "노란 카트", "빨간 카트", "파란 카트"], "correctIndex": 0, "explanation": "2004년 출시된 카트라이더! 처음엔 모두 연습용 카트로 시작했죠. 그 시절 빠른 카트를 가진 친구가 부러웠던 기억!", "year": 2004, "difficulty": "hard" },
+    { "id": "games-005", "text": "스타크래프트에서 '저그'의 기본 유닛은?", "type": "text", "choices": ["저글링", "히드라리스크", "뮤탈리스크", "울트라리스크"], "correctIndex": 0, "explanation": "저글링! 6풀 저글링 러시는 PC방의 기본 전략이었죠. '개빨무'를 기억하시나요?", "year": 1998, "difficulty": "easy" },
+    { "id": "games-006", "text": "리니지가 처음 출시된 해는?", "type": "text", "choices": ["1998년", "1999년", "2000년", "1997년"], "correctIndex": 0, "explanation": "리니지는 1998년 9월에 출시되어 한국 MMORPG의 시대를 열었습니다. 혈맹 전쟁의 추억!", "year": 1998, "difficulty": "normal" },
+    { "id": "games-007", "text": "크레이지 아케이드에서 물풍선을 던지는 캐릭터 이름은?", "type": "text", "choices": ["배찌", "마리드", "케피", "에띠"], "correctIndex": 0, "explanation": "배찌! 크레이지 아케이드는 2001년 출시되어 넥슨의 대표 캐주얼 게임이 되었습니다.", "year": 2001, "difficulty": "easy" },
+    { "id": "games-008", "text": "다음 중 넥슨이 만든 게임이 아닌 것은?", "type": "text", "choices": ["리니지", "메이플스토리", "카트라이더", "크레이지 아케이드"], "correctIndex": 0, "explanation": "리니지는 엔씨소프트(NCsoft)가 만든 게임입니다! 넥슨은 메이플, 카트라이더, 크아 등을 만들었죠.", "year": 1998, "difficulty": "hard" },
+    { "id": "games-009", "text": "뮤 온라인의 개발사는?", "type": "text", "choices": ["웹젠", "넥슨", "엔씨소프트", "한게임"], "correctIndex": 0, "explanation": "뮤 온라인은 웹젠이 2001년에 출시한 3D MMORPG입니다. 어두운 분위기의 그래픽이 인상적이었죠!", "year": 2001, "difficulty": "normal" },
+    { "id": "games-010", "text": "테일즈위버가 원작으로 삼은 소설은?", "type": "text", "choices": ["룬의 아이들", "드래곤 라자", "눈물을 마시는 새", "퇴마록"], "correctIndex": 0, "explanation": "테일즈위버는 전민희 작가의 소설 '룬의 아이들'을 원작으로 한 게임입니다. OST도 명곡이 많았죠!", "year": 2003, "difficulty": "hard" }
+  ]
+}

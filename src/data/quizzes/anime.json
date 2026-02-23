@@ -1,0 +1,17 @@
+{
+  "category": "anime",
+  "title": "추억의 애니",
+  "description": "슬램덩크, 드래곤볼... 학교 끝나면 달려가 본 만화들을 얼마나 기억하시나요?",
+  "questions": [
+    { "id": "anime-001", "text": "슬램덩크에서 강백호의 포지션은?", "type": "text", "choices": ["파워 포워드", "센터", "포인트 가드", "슈팅 가드"], "correctIndex": 0, "explanation": "강백호는 북산고의 파워 포워드! 리바운드왕으로 불리며 농구를 시작한 지 얼마 안 된 천재였죠. 한국 농구 붐의 주역!", "year": 1994, "difficulty": "easy" },
+    { "id": "anime-002", "text": "드래곤볼Z에서 손오공이 처음 슈퍼 사이어인으로 변신한 계기는?", "type": "text", "choices": ["크리링의 죽음", "베지터의 도발", "셀의 등장", "프리저의 공격"], "correctIndex": 0, "explanation": "나메크 성에서 프리저가 크리링을 죽이자 손오공이 분노하여 처음으로 슈퍼 사이어인으로 변신했습니다!", "year": 1996, "difficulty": "normal" },
+    { "id": "anime-003", "text": "포켓몬스터에서 지우의 첫 번째 포켓몬은?", "type": "text", "choices": ["피카츄", "파이리", "이상해씨", "꼬부기"], "correctIndex": 0, "explanation": "지우는 늦잠을 자서 원래 원하던 포켓몬 대신 피카츄를 받게 되었죠. 이것이 전설의 시작!", "year": 1999, "difficulty": "easy" },
+    { "id": "anime-004", "text": "세일러문에서 주인공 츠키노 우사기의 한국판 이름은?", "type": "text", "choices": ["세라", "미나", "레이", "아미"], "correctIndex": 0, "explanation": "한국 방영판에서 우사기는 '세라'로 불렸습니다. '달의 요정 세일러문' 주제가를 기억하시나요?", "year": 1997, "difficulty": "easy" },
+    { "id": "anime-005", "text": "명탐정 코난에서 쿠도 신이치가 어린아이가 된 원인은?", "type": "text", "choices": ["검은 조직의 약물 APTX4869", "마법사의 저주", "실험 사고", "독이 든 음식"], "correctIndex": 0, "explanation": "검은 조직의 진(Gin)이 먹인 APTX4869라는 약물 때문에 쿠도 신이치는 어린아이의 모습이 되었습니다.", "year": 2000, "difficulty": "normal" },
+    { "id": "anime-006", "text": "원피스에서 루피가 먹은 악마의 열매는?", "type": "text", "choices": ["고무고무 열매", "불불 열매", "번쩍번쩍 열매", "어둠어둠 열매"], "correctIndex": 0, "explanation": "루피는 고무고무 열매를 먹어 온몸이 고무처럼 늘어나는 능력을 얻었습니다. 해적왕이 될 거야!", "year": 2003, "difficulty": "easy" },
+    { "id": "anime-007", "text": "나루토에서 나루토의 몸 안에 봉인된 미수는?", "type": "text", "choices": ["구미(아홉 꼬리 여우)", "일미(한 꼬리 너구리)", "팔미(여덟 꼬리 소)", "삼미(세 꼬리 거북)"], "correctIndex": 0, "explanation": "나루토 안에는 구미(쿠라마)가 봉인되어 있습니다. 4대 호카게인 아버지 미나토가 봉인했죠.", "year": 2005, "difficulty": "normal" },
+    { "id": "anime-008", "text": "신세기 에반게리온에서 주인공 이카리 신지가 탑승하는 에바의 번호는?", "type": "text", "choices": ["초호기", "영호기", "2호기", "3호기"], "correctIndex": 0, "explanation": "이카리 신지는 에반게리온 초호기의 파일럿입니다. '도망치지 마, 도망치지 마...'는 명대사!", "year": 1997, "difficulty": "hard" },
+    { "id": "anime-009", "text": "디지몬 어드벤처에서 태일이의 파트너 디지몬은?", "type": "text", "choices": ["아구몬", "파피몬", "파닥몬", "텐타몬"], "correctIndex": 0, "explanation": "태일이(야가미 타이치)의 파트너는 아구몬! 궁극체인 워그레이몬으로의 진화는 전설이죠.", "year": 2000, "difficulty": "normal" },
+    { "id": "anime-010", "text": "짱구는 못말려에서 짱구의 여동생 이름은?", "type": "text", "choices": ["짱아", "유리", "철수", "맹구"], "correctIndex": 0, "explanation": "짱구의 여동생 짱아(히마와리)! 짱구 가족은 신형만, 봉미선, 짱구, 짱아 그리고 흰둥이로 구성되어 있죠.", "year": 1999, "difficulty": "hard" }
+  ]
+}
