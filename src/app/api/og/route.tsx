@@ -1,8 +1,6 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
 
-export const runtime = "edge";
-
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
   const score = searchParams.get("score") ?? "0";
@@ -10,7 +8,7 @@ export async function GET(request: NextRequest) {
   const level = searchParams.get("level") ?? "";
 
   // Load DungGeunMo font for Satori
-  // NOTE: The font file is .woff (not .woff2) at src/styles/fonts/DungGeunMo.woff
+  // Uses Node.js runtime (default) to stay under Vercel Hobby Edge Function 1MB limit
   const fontData = await fetch(
     new URL("../../../styles/fonts/DungGeunMo.woff", import.meta.url)
   ).then((res) => res.arrayBuffer());
